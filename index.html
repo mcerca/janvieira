@@ -104,6 +104,22 @@
       border-radius: 5px;
     }
 
+    .call-to-action {
+      position: fixed;
+      top: 85%;
+      right: 15px;
+      bottom: 0;
+    }
+
+    .call-to-action a {
+      position: relative;
+    }
+
+    .call-to-action img {
+      width: 40px;
+      position: absolute;
+    }
+
     .-top-20 {
       top: -6rem !important;
     }
@@ -746,6 +762,12 @@
       </div>
     </div>
   </footer>
+
+  <div class="call-to-action">
+    <a href="https://api.whatsapp.com/send?phone=+5511982564918&text=Olá, Jan, acabei de acessar seu site e gostaria de falar contigo sobre uma proposta de trabalho." class="p-8 w-10 h-10 rounded-full bg-green-800 flex items-center justify-center hover:bg-brand-purple transition" target="_blank" title="Abrir Whatsapp">
+      <img src="assets/img/whatsapp.svg" alt="Whatsapp">
+    </a>
+  </div>
 
   <!-- JAVASCRIPT / LOGIC -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -29,12 +29,13 @@
   <meta name="twitter:description" content="Mentoria e consultoria para líderes que buscam resultados extraordinários.">
   <meta name="twitter:image" content="https://www.janvieira.com.br/assets/img/social-share.jpg">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
 
   <script type="application/ld+json">
     {
@@ -104,6 +105,34 @@
       border-radius: 5px;
     }
 
+    .call-to-action {
+      position: fixed;
+      top: 85%;
+      right: 15px;
+      bottom: 0;
+    }
+
+    .call-to-action a {
+      position: relative;
+    }
+
+    .call-to-action img {
+      width: 40px;
+      position: absolute;
+    }
+
+    .-top-20 {
+      top: -6rem !important;
+    }
+
+    .text-brand-light-blue {
+      color: #1BD9DE;
+    }
+
+    .border-brand-light-blue {
+      border-color: #1BD9DE;
+    }
+
     /* Efeito de Gradiente no Texto */
     .text-gradient {
       background: linear-gradient(to right, #b026ff, #ff26b9);
@@ -166,7 +195,7 @@
 
     .service-card:hover {
       transform: translateY(-10px);
-      border-color: #b026ff;
+      border-color: #1BD9DE;
     }
 
     /* --- Carrossel Style --- */
@@ -260,16 +289,17 @@
   <!-- HEADER / NAVIGATION -->
   <header class="fixed w-full top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300" id="navbar">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <!-- <a href="#" class="text-2xl font-bold tracking-tighter">JAN<span class="text-brand-purple">VIEIRA</span></a> -->
-      <img src="assets/img/logo.png" class="">
+      <a href="/" title="Jan Vieira" class="text-2xl font-bold tracking-tighter">
+        <img src="assets/img/logo.png" class="" alt="Logo">
+      </a>
 
       <nav class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest items-center">
-        <a href="#home" class="hover:text-brand-purple transition-colors">Home</a>
-        <a href="#sobre" class="hover:text-brand-purple transition-colors">Sobre</a>
-        <a href="#servicos" class="hover:text-brand-purple transition-colors">Serviços</a>
-        <a href="#depoimentos" class="hover:text-brand-purple transition-colors">Depoimentos</a>
-        <a href="#team" class="hover:text-brand-purple transition-colors">Nosso time</a>
-        <a href="#contato" class="bg-brand-purple px-5 py-2 rounded-full hover:bg-fuchsia-600 transition-colors">Contato</a>
+        <a href="#home" title="Home" class="hover:text-brand-purple transition-colors">Home</a>
+        <a href="#sobre" title="Sobre" class="hover:text-brand-purple transition-colors">Sobre</a>
+        <a href="#servicos" title="Serviços" class="hover:text-brand-purple transition-colors">Serviços</a>
+        <a href="#depoimentos" title="Depoimentos" class="hover:text-brand-purple transition-colors">Depoimentos</a>
+        <a href="#team" title="Time" class="hover:text-brand-purple transition-colors">Nosso time</a>
+        <a href="https://www.linkedin.com/in/janvieira/" target="_blank" title="Ir para o Linkedin da Jan Vieira Oficial" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-purple transition"><i class="fab fa-linkedin-in"></i></a>
       </nav>
 
       <!-- Mobile Menu Button -->
@@ -304,7 +334,7 @@
         </p>
 
         <div class="flex gap-4 pt-4">
-          <a href="#contato" class="btn-glow px-8 py-4 bg-transparent border-2 border-brand-purple text-white font-bold rounded hover:bg-brand-purple transition-all">
+          <a href="mailto:janvieirapalestras@gmail.com" class="btn-glow px-8 py-4 bg-transparent border-2 border-brand-purple text-white font-bold rounded hover:bg-brand-purple transition-all">
             SAIBA MAIS
           </a>
         </div>
@@ -313,10 +343,11 @@
         <div class="pt-10 opacity-60">
           <p class="text-xs uppercase tracking-widest mb-4">Empresas apoiadas:</p>
           <div class="flex gap-6 grayscale hover:grayscale-0 transition-all duration-500">
-            <i class="fab fa-aws text-3xl"></i>
-            <i class="fab fa-google text-3xl"></i>
-            <i class="fab fa-microsoft text-3xl"></i>
-            <i class="fab fa-spotify text-3xl"></i>
+            <img src="assets/img/casahumana.jpeg" alt="A Casa Humana" width="40px" height="40px">
+            <img src="assets/img/cnu.jpeg" alt="Central Nacional Unimed" width="40px" height="40px">
+            <img src="assets/img/dasa-logo.jpeg" alt="Dasa" width="40px" height="40px" title="Dasa">
+            <img src="assets/img/nilo-logo.jpeg" alt="Nilo" width="40px" height="40px" title="Nilo">
+            <img src="assets/img/safecare-logo.jpeg" alt="Safe Care" width="40px" height="40px" title="Safe Care">
           </div>
         </div>
       </div>
@@ -348,21 +379,22 @@
           <h2 class="text-sm font-bold text-brand-purple uppercase tracking-widest mb-2">Sobre nós</h2>
           <h3 class="text-3xl font-bold mb-6">Levamos saúde além das palavras; transformamos vidas!</h3>
           <p class="text-gray-400 mb-4 leading-relaxed">
-            Somos profissionais apaixonados pelo que fazemos, com ampla experiência em Saúde e Comunicação, dedicados ao nosso propósito de impactar pessoas e empresas. Para nós, falar sobre saúde vai muito além de realizar “uma simples palestra”.
+            Somos profissionais apaixonados pelo que fazemos, com ampla experiência em Saúde e Comunicação, dedicados ao nosso propósito de impactar pessoas e empresas.
           </p>
           <p class="text-gray-400 mb-6 leading-relaxed">
+            Para nós, falar sobre saúde vai muito além de realizar “uma simples palestra”.
             É sobre inspirar mudanças, ampliar percepções e transformar vidas, mostrando que sempre é possível evoluir.
           </p>
           <p class="text-gray-400 mb-6 leading-relaxed">
-            É sobre ajudar empresas a superarem desafios em sua gestão de saúde, criando um impacto real e sustentável.
-            Nossos valores nos levam a cuidar de colaboradores de diferentes instituições e públicos que necessitam de um olhar humano, profissional e sensível.
+            É sobre ajudar empresas a superarem desafios em sua Gestão de Saúde, criando um impacto real e sustentável.
           </p>
+          <p class="text-gray-400 mb-6 leading-relaxed">Nossos valores nos levam a cuidar de colaboradores de diferentes instituições e de públicos que necessitam de um olhar humano, profissional e sensível.</p>
           <p class="text-gray-400 mb-6 leading-relaxed">
-            Porque comunicar saúde é, acima de tudo, promover o bem-estar e resultados transformadores.
+            <strong>Porque comunicar saúde é, acima de tudo, promover o bem-estar e resultados transformadores.</strong>
           </p>
           <div class="bg-gray-900 p-8 mb-4 border-gray-800">
             <p class="text-gray-400 mb-6 leading-relaxed">
-              <strong>Formatos Flexíveis: Presenciais e Online</strong>
+              <strong class="text-brand-purple">Formatos Flexíveis: Presenciais/Online/Híbrido</strong>
               <br>
               Para se ajustar à realidade e às necessidades da sua empresa, garantindo conveniência e alcance.
             </p>
@@ -379,7 +411,7 @@
     <div class="container mx-auto px-6">
       <div class="text-center mb-16" data-aos="fade-up">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Quais temas Jan Vieira disponibiliza para você?</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Sabemos que saúde é "plural" e que cada empresa carrega desafios, realidades e necessidades únicas. Por isso, nosso portfólio de palestras é <strong> exclusivamente personalizado</strong>, criado sob medida para atender às demandas específicas de cada cliente.</p>
+        <p class="text-gray-600 max-w-2xl mx-auto">Sabemos que saúde é "plural" e que cada empresa carrega desafios, realidades e necessidades únicas. Por isso, nosso portfólio de palestras é <strong class="text-brand-purple"> exclusivamente personalizado</strong>, criado sob medida para atender às demandas específicas de cada cliente.</p>
 
         <p class="text-gray-600 max-w-2xl mx-auto">
           Entre os temas que podemos abordar estão os principais pilares de <strong>Promoção</strong> e <strong>Prevenção da Saúde</strong>, como:
@@ -388,66 +420,93 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Card 1 -->
-        <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-purple text-2xl mb-6">
+        <div class="service-card bg-gray-900 p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-light-blue text-2xl mb-6">
             <i class="fas fa-users"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3">Doenças crônicas</h3>
-          <p class="text-gray-600 text-sm">Diabetes, hipertensão e outras condições que impactam a saúde e a produtividade.</p>
+          <h3 class="text-xl font-bold mb-3 text-brand-light-blue">Doenças crônicas</h3>
+          <p class="text-gray-600 text-sm text-white">Diabetes, hipertensão e outras condições que impactam a saúde e a produtividade.</p>
         </div>
 
         <!-- Card 2 -->
-        <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-purple text-2xl mb-6">
+        <div class="service-card bg-gray-900 p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-light-blue text-2xl mb-6">
             <i class="fas fa-brain"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3">Saúde Mental</h3>
-          <p class="text-gray-600 text-sm">Como lidar com o estresse, ansiedade e prevenção da síndrome de burnout.</p>
+          <h3 class="text-xl font-bold mb-3 text-brand-light-blue">Saúde Mental</h3>
+          <p class="text-gray-600 text-sm text-white">Como lidar com o estresse, ansiedade e prevenção da síndrome de burnout.</p>
         </div>
 
         <!-- Card 3 -->
-        <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="300">
-          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-purple text-2xl mb-6">
+        <div class="service-card bg-gray-900 p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-light-blue text-2xl mb-6">
             <i class="fas fa-balance-scale"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3">Normas Regulamentadoras</h3>
-          <p class="text-gray-600 text-sm">Adequações necessárias, como as exigências da NR1, para garantir saúde e segurança nas empresas.</p>
+          <h3 class="text-xl font-bold mb-3 text-brand-light-blue">Saúde Mental Corporativa- NR1</h3>
+          <p class="text-gray-600 text-sm text-white">Adequações necessárias, como as exigências da NR1, para garantir saúde e segurança nas empresas.</p>
         </div>
 
         <!-- Card 4 -->
-        <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="400">
-          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-purple text-2xl mb-6">
+        <div class="service-card bg-gray-900 p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="400">
+          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-light-blue text-2xl mb-6">
             <i class="fas fa-comments"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3">Meses coloridos</h3>
-          <p class="text-gray-600 text-sm">Ações voltadas para campanhas de conscientização, como Outubro Rosa, Novembro Azul, Janeiro Branco, entre outras.</p>
+          <h3 class="text-xl font-bold mb-3 text-brand-light-blue">Meses coloridos</h3>
+          <p class="text-gray-600 text-sm text-white">Ações voltadas para campanhas de conscientização, como Outubro Rosa, Novembro Azul, Janeiro Branco, entre outras.</p>
         </div>
 
         <!-- Card 5 -->
-        <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="500">
-          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-purple text-2xl mb-6">
+        <div class="service-card bg-gray-900 p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="500">
+          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-light-blue text-2xl mb-6">
             <i class="fas fa-cutlery"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3">Alimentação e Bem-estar</h3>
-          <p class="text-gray-600 text-sm">A importância de escolhas saudáveis no dia a dia.</p>
+          <h3 class="text-xl font-bold mb-3 text-brand-light-blue">Alimentação e Bem-estar</h3>
+          <p class="text-gray-600 text-sm text-white">A importância de escolhas saudáveis no dia a dia.</p>
         </div>
 
         <!-- Card 6 -->
-        <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="600">
-          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-purple text-2xl mb-6">
+        <div class="service-card bg-gray-900 p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="600">
+          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-light-blue text-2xl mb-6">
             <i class="fas fa-heart"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3">Prevenção de acidentes</h3>
-          <p class="text-gray-600 text-sm">Cuidados com ergonomia e promoção de um ambiente de trabalho seguro.</p>
+          <h3 class="text-xl font-bold mb-3 text-brand-light-blue">Prevenção de acidentes</h3>
+          <p class="text-gray-600 text-sm text-white">Cuidados com ergonomia e promoção de um ambiente de trabalho seguro.</p>
         </div>
 
         <!-- Card 7 -->
-        <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="600">
-          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-purple text-2xl mb-6">
-            <i class="fas fa-area-chart"></i>
+        <div class="service-card bg-gray-900 p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="600">
+          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-light-blue text-2xl mb-6">
+            <i class="fas fa-money-bill-trend-up"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3">Saúde financeira</h3>
-          <p class="text-gray-600 text-sm">Dicas práticas e claras sobre como organizar a vida financeira.</p>
+          <h3 class="text-xl font-bold mb-3 text-brand-light-blue">Saúde financeira</h3>
+          <p class="text-gray-600 text-sm text-white">Dicas práticas e claras sobre como organizar a vida financeira.</p>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="service-card bg-gray-900 p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="600">
+          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-light-blue text-2xl mb-6">
+            <i class="fas fa-person-pregnant"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-brand-light-blue">Cuidados e Saúde para Gestantes</h3>
+          <p class="text-gray-600 text-sm text-white">Uma abordagem completa e acolhedora para as futuras mamães, abordando saúde física e emocional durante a gestação, hábitos saudáveis, preparo para o parto e cuidados no pós-parto. Informação e apoio para promover o bem-estar da mãe e do bebê.</p>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="service-card bg-gray-900 p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="600">
+          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-light-blue text-2xl mb-6">
+            <i class="fas fa-microphone-lines"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-brand-light-blue">Uso Consciente do Plano de Saúde</h3>
+          <p class="text-gray-600 text-sm text-white">Conscientização sobre o uso inteligente do plano de saúde, destacando os benefícios da prevenção, o uso correto de serviços e como evitar desperdícios. Uma ação educativa para otimizar recursos e garantir a excelência no atendimento.</p>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="service-card bg-gray-900 p-8 rounded-xl shadow-lg border border-transparent" data-aos="fade-up" data-aos-delay="600">
+          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-brand-light-blue text-2xl mb-6">
+            <i class="fas fa-plus"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-brand-light-blue">Seu pedido personalizado</h3>
+          <p class="text-gray-600 text-sm text-white">E muito mais</p>
         </div>
       </div>
 
@@ -461,9 +520,9 @@
       </div>
 
       <div class="text-center mt-12">
-        <button class="bg-brand-purple text-white px-8 py-3 rounded-full font-bold hover:bg-fuchsia-700 transition shadow-lg hover:shadow-purple-500/50">
+        <a href="mailto:janvieirapalestras@gmail.com" class="bg-brand-purple text-white px-8 py-3 rounded-full font-bold hover:bg-fuchsia-700 transition shadow-lg hover:shadow-purple-500/50">
           SOLICITAR PROPOSTA
-        </button>
+        </a>
       </div>
     </div>
   </section>
@@ -473,8 +532,11 @@
     <div class="container mx-auto px-6">
       <div class="flex flex-col md:flex-row items-center gap-12">
         <div class="w-full md:w-1/2 relative" data-aos="fade-right">
+          <h2 class="text-3xl font-bold mb-6">Resultados que fazem a diferença para sua empresa e seus colaboradores</h2>
+          <p class="text-gray-400 mb-8">Nosso time entende não apenas de conteúdos técnicos da saúde, mas também de <strong class="text-brand-purple">Gestão de Saúde Corporativa</strong>. O que faz toda diferença.</p>
+
           <!-- Tech/Graph Image -->
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" class="rounded-xl shadow-2xl opacity-80 hover:opacity-100 transition duration-500 border border-gray-800">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" class="rounded-xl shadow-2xl opacity-80 hover:opacity-100 transition duration-500 border border-gray-800" alt="Metodologia">
 
           <!-- Floating Overlay Card -->
           <div class="absolute bottom-10 -right-5 bg-gray-800 p-4 rounded-lg shadow-xl border border-gray-700 hidden md:block animate-bounce" style="animation-duration: 3s;">
@@ -489,43 +551,39 @@
         </div>
 
         <div class="w-full md:w-1/2" data-aos="fade-left">
-          <h2 class="text-3xl font-bold mb-6">Resultados que fazem a diferença para sua empresa e seus colaboradores</h2>
-          <p class="text-gray-400 mb-8">Nosso time entende não apenas de conteúdos técnicos da saúde, mas também de Gestão de Saúde Corporativa. O que faz toda diferença.</p>
+          <!-- <h2 class="text-3xl font-bold mb-6">Resultados que fazem a diferença para sua empresa e seus colaboradores</h2>
+          <p class="text-gray-400 mb-8">Nosso time entende não apenas de conteúdos técnicos da saúde, mas também de <strong class="text-brand-purple">Gestão de Saúde Corporativa</strong>. O que faz toda diferença.</p> -->
 
           <p class="text-gray-400 mb-8">Investir em um time vai muito além de engajar sua equipe – é uma estratégia que transforma o ambiente corporativo e gera benefícios mensuráveis, como:</p>
 
           <ul class="space-y-4">
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-brand-purple mt-1 mr-3"></i>
-              <span class="text-gray-300"><strong>Colaboradores mais saudáveis e produtivos</strong>: uma equipe engajada, consciente sobre saúde física, mental e emocional, trabalha melhor e com mais energia.</span>
+            <li class="flex items-center bg-gray-900 p-4 rounded-md">
+              <i class="fas fa-check fa-3x text-brand-purple mt-1 mr-3"></i>
+              <span class="text-gray-300"><strong>Equipe saudável e produtiva</strong>: <br> Colaboradores conscientes e engajados trabalham com mais energia e eficiência.</span>
             </li>
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-brand-purple mt-1 mr-3"></i>
-              <span class="text-gray-300"><strong>Redução no índice de sinistros do plano de saúde</strong>: ao promover a prevenção e conscientização sobre saúde, sua empresa diminui a utilização desnecessária do plano, reduzindo custos relacionados ao benefício.</span>
+            <li class="flex items-center bg-gray-900 p-4 rounded-md">
+              <i class="fas fa-check fa-3x text-brand-purple mt-1 mr-3"></i>
+              <span class="text-gray-300"><strong>Redução de custos</strong>: <br> Diminua sinistros e gastos desnecessários do plano de saúde com ações preventivas.</span>
             </li>
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-brand-purple mt-1 mr-3"></i>
-              <span class="text-gray-300"><strong>Gestão de saúde</strong>: uso consciente do plano, coordenação de cuidado, indicadores críticos de apólices das seguradoras, controle de absenteísmo, entre outros.</span>
+            <li class="flex items-center bg-gray-900 p-4 rounded-md">
+              <i class="fas fa-check fa-3x text-brand-purple mt-1 mr-3"></i>
+              <span class="text-gray-300"><strong>Gestão de saúde efetiva</strong>: <br>Uso consciente do plano, controle de absenteísmo e acompanhamento de indicadores críticos.</span>
             </li>
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-brand-purple mt-1 mr-3"></i>
-              <span class="text-gray-300">Ferramentas exclusivas de assessment.</span>
+            <li class="flex items-center bg-gray-900 p-4 rounded-md">
+              <i class="fas fa-check fa-3x text-brand-purple mt-1 mr-3"></i>
+              <span class="text-gray-300"><strong>Engajamento em ações de saúde</strong>: <br>Estimule a participação em programas, workshops, campanhas e blitz.</span>
             </li>
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-brand-purple mt-1 mr-3"></i>
-              <span class="text-gray-300"><strong>Estímulo para participar das ações de Saúde</strong>: programas, campanhas, blitz, workshops oferecidos em sua instituição.</span>
+            <li class="flex items-center bg-gray-900 p-4 rounded-md">
+              <i class="fas fa-check fa-3x text-brand-purple mt-1 mr-3"></i>
+              <span class="text-gray-300"><strong>Retenção de talentos</strong>: <br>Clima organizacional focado no bem-estar fortalece vínculos e reduz a rotatividade.</span>
             </li>
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-brand-purple mt-1 mr-3"></i>
-              <span class="text-gray-300"><strong>Aumento do engajamento e retenção de talentos</strong>: um clima organizacional focado no bem-estar reforça o cuidado da empresa com sua equipe, fortalecendo vínculos e reduzindo a rotatividade.</span>
+            <li class="flex items-center bg-gray-900 p-4 rounded-md">
+              <i class="fas fa-check fa-3x text-brand-purple mt-1 mr-3"></i>
+              <span class="text-gray-300"><strong>Alinhamento estratégico</strong>: <br>Ações personalizadas e alinhadas aos desafios organizacionais garantem maior impacto.</span>
             </li>
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-brand-purple mt-1 mr-3"></i>
-              <span class="text-gray-300"><strong>Alinhamento estratégico com a liderança</strong>: com palestras adaptadas ao perfil de cada empresa e alinhamento prévio com gestores, as ações são mais direcionadas e assertivas, garantindo impacto direto nos desafios organizacionais.</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-brand-purple mt-1 mr-3"></i>
-              <span class="text-gray-300"><strong>Resultados de longo prazo</strong>: educação contínua, capacitação atualizada e comunicação clara transformam hábitos e geram impacto tanto no curto quanto no longo prazo.</span>
+            <li class="flex items-center bg-gray-900 p-4 rounded-md">
+              <i class="fas fa-check fa-3x text-brand-purple mt-1 mr-3"></i>
+              <span class="text-gray-300"><strong>Resultados sustentáveis</strong>: <br>Educação contínua e capacitação transformam hábitos e geram impactos duradouros.</span>
             </li>
           </ul>
         </div>
@@ -539,39 +597,51 @@
       <h2 class="text-3xl font-bold mb-16" data-aos="fade-up">O que dizem nossos parceiros</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Testimonial 1 -->
-        <div class="bg-brand-dark p-8 rounded-xl relative mt-10 md:mt-0" data-aos="flip-left">
-          <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-20 h-20 rounded-full border-4 border-brand-purple">
+        <!-- Testimonial 0 -->
+        <div class="bg-brand-dark p-8 rounded-xl relative mt-10 md:mt-0 border-brand-light-blue border-2" data-aos="flip-left">
+          <div>
+            <p class="text-gray-400 italic mb-4">"A Jan tem o dom de dominar profundamente seus temas e comunicá-los com uma oratória envolvente que cativa e acolhe o público. Admiro especialmente sua capacidade de trazer tranquilidade e clareza aos assuntos mais complexos ou tensos, criando um ambiente seguro para o aprendizado."</p>
+            <p class="text-xs text-brand-light-blue">— Nando Arruda</p>
           </div>
-          <div class="mt-8">
-            <p class="text-gray-400 italic mb-4">"A consultoria da Jan transformou completamente a dinâmica da minha diretoria. Hoje somos um time coeso."</p>
-            <h4 class="font-bold text-white">Carla Mendez</h4>
-            <p class="text-xs text-brand-purple">CEO, TechSolutions</p>
+        </div>
+
+        <!-- Testimonial 1 -->
+        <div class="bg-brand-dark p-8 rounded-xl relative mt-10 md:mt-0 border-brand-light-blue border-2" data-aos="flip-left">
+          <div>
+            <p class="text-gray-400 italic mb-4">"O carisma de Jan Vieira é contagiante! Sua forma de interagir faz com que todos se sintam à vontade e engajados, seja em palestras, treinamentos ou conversas mais informais."</p>
+            <p class="text-xs text-brand-light-blue">— Gestores da Conecta Mais</p>
           </div>
         </div>
 
         <!-- Testimonial 2 -->
-        <div class="bg-brand-dark p-8 rounded-xl relative mt-10 md:mt-0" data-aos="flip-left" data-aos-delay="100">
-          <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-20 h-20 rounded-full border-4 border-brand-purple">
-          </div>
-          <div class="mt-8">
-            <p class="text-gray-400 italic mb-4">"Resultados expressivos em apenas 3 meses de mentoria. Recomendo para qualquer executivo."</p>
-            <h4 class="font-bold text-white">Roberto Silva</h4>
-            <p class="text-xs text-brand-purple">Diretor Comercial, GlobalLog</p>
+        <div class="bg-brand-dark p-8 rounded-xl relative mt-10 md:mt-0 border-brand-light-blue border-2" data-aos="flip-left" data-aos-delay="100">
+          <div>
+            <p class="text-gray-400 italic mb-4">"A facilidade de comunicação que Jan Vieira possui é admirável. Ela consegue transmitir até os temas mais complexos com clareza e espontaneidade, conquistando a atenção de todos."</p>
+            <p class="text-xs text-brand-light-blue">— Equipe Nexa Desenvolvimento</p>
           </div>
         </div>
 
         <!-- Testimonial 3 -->
-        <div class="bg-brand-dark p-8 rounded-xl relative mt-10 md:mt-0" data-aos="flip-left" data-aos-delay="200">
-          <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
-            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-20 h-20 rounded-full border-4 border-brand-purple">
+        <div class="bg-brand-dark p-8 rounded-xl relative mt-10 md:mt-0 border-brand-light-blue border-2" data-aos="flip-left" data-aos-delay="200">
+          <div>
+            <p class="text-gray-400 italic mb-4">"Trabalhar com Jan Vieira é sempre uma experiência transformadora. Sua conexão genuína com o público e carisma fazem toda a diferença nos resultados atingidos."</p>
+            <p class="text-xs text-brand-light-blue">— Equipe da Excelência Treinamentos</p>
           </div>
-          <div class="mt-8">
-            <p class="text-gray-400 italic mb-4">"A palestra no nosso evento anual foi o ponto alto. Energia contagiante e conteúdo prático."</p>
-            <h4 class="font-bold text-white">Ana Pereira</h4>
-            <p class="text-xs text-brand-purple">HR Manager, RetailGroup</p>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="bg-brand-dark p-8 rounded-xl relative mt-10 md:mt-0 border-brand-light-blue border-2" data-aos="flip-left" data-aos-delay="200">
+          <div>
+            <p class="text-gray-400 italic mb-4">"Jan Vieira tem uma sensibilidade única para identificar as necessidades das pessoas e transmitir suas mensagens com empatia e carisma. Sempre é um prazer ouvi-la e aprender com ela."</p>
+            <p class="text-xs text-brand-light-blue">— Equipe Evoluir Soluçõe</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="bg-brand-dark p-8 rounded-xl relative mt-10 md:mt-0 border-brand-light-blue border-2" data-aos="flip-left" data-aos-delay="200">
+          <div>
+            <p class="text-gray-400 italic mb-4">"Jan Vieira tem uma habilidade incrível de se conectar com qualquer público. Sua comunicação é leve, clara e envolvente, tornando cada interação única e especial."</p>
+            <p class="text-xs text-brand-light-blue">— Equipe Alvo Estratégico</p>
           </div>
         </div>
       </div>
@@ -581,62 +651,85 @@
   <!-- SQUAD SECTION (White Background as per layout) -->
   <section id="team" class="py-20 bg-brand-light text-brand-dark">
     <div class="container mx-auto px-6">
-      <div class="text-center mb-16" data-aos="fade-up">
+      <div class="text-center mb-10" data-aos="fade-up">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Por que nos escolher?</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Nosso time é formado por profissionais apaixonados pelo que fazem, unidos por um único propósito: transformar a saúde corporativa de forma prática, fundamentada e inovadora.</p>
+        <p class="text-gray-600 max-w-2xl mx-auto">Nosso time é formado por profissionais apaixonados pelo que fazem, unidos por um único propósito: <strong>transformar a saúde corporativa de forma prática, fundamentada e inovadora</strong>.</p>
 
         <p class="text-gray-600 max-w-2xl mx-auto mt-8">
-          Juntos, criamos conteúdos únicos, diretos e altamente impactantes, direcionados para as reais necessidades das empresas e de seus colaboradores; e de outros públicos específicos.
-          Conte conosco para cuidar da saúde e do bem-estar da sua equipe! 💼✨
+          Combinamos expertise e criatividade para desenvolver conteúdos únicos, direto ao ponto e repletos de impacto, sempre focados nas reais necessidades das empresas, seus colaboradores e outros públicos estratégicos.
         </p>
 
         <p class="text-gray-600 max-w-2xl mx-auto mt-8 mb-4">
-          <strong>Conheça nosso time:</strong>
+          <strong>🎯 Conte conosco para cuidar da saúde, do bem-estar e do sucesso da sua equipe! 💼✨</strong>
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Testimonial 1 -->
-        <div class="bg-brand-dark p-8 rounded-xl relative mt-10 md:mt-0" data-aos="flip-left">
-          <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
-            <img src="assets/img/squad/jan.png" class="w-20 h-20 rounded-full border-4 border-brand-purple">
+        <!-- Member 1 -->
+        <div class="bg-brand-dark p-8 rounded-xl border-4 border-brand-light-blue relative mt-10 md:mt-0" data-aos="flip-left">
+          <div class="flex justify-center">
+            <img src="assets/img/squad/jan.png" class="w-40 h-40 rounded-full" alt="Janete Vieira">
           </div>
-          <div class="mt-8">
-            <p class="text-gray-400 italic mb-4">Especialização em Gestão de Saúde Corporativa, Enfermagem do Trabalho, Gerontologia, Docência e Produtos Digitais. Uma referência em treinamentos corporativos, palestras transformadoras, inovação e mentorias voltadas para a comunicação em saúde.</p>
+          <div class="mt-5">
             <h4 class="font-bold text-white">Jan Vieira</h4>
-            <p class="text-xs text-brand-purple">Enfermeira Especialista em Promoção e Prevenção da Saúde</p>
+            <p class="text-xs text-brand-light-blue mb-5">Enfermeira Especialista em Promoção e Prevenção da Saúde</p>
+            <p class="text-gray-400 italic mb-4">Especialização em Gestão de Saúde Corporativa, Enfermagem do Trabalho, Gerontologia, Docência e Produtos Digitais. Uma referência em treinamentos corporativos, palestras transformadoras, inovação e mentorias voltadas para a comunicação em saúde.</p>
           </div>
         </div>
 
-        <!-- Testimonial 2 -->
-        <div class="bg-brand-dark p-8 rounded-xl relative mt-10 md:mt-0" data-aos="flip-left" data-aos-delay="100">
-          <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
-            <img src="assets/img/squad/felipe.png" class="w-20 h-20 rounded-full border-4 border-brand-purple">
+        <!-- Member 2 -->
+        <div class="bg-brand-dark p-8 border-4 border-brand-light-blue rounded-xl relative mt-10 md:mt-0" data-aos="flip-left" data-aos-delay="100">
+          <div class="flex justify-center">
+            <img src="assets/img/squad/felipe.png" class="w-40 h-40 rounded-full" alt="Felipe Bozi">
           </div>
-          <div class="mt-8">
-            <p class="text-gray-400 italic mb-4">Sou médico geriatra, pesquisador e entusiasta de inovação em saúde. Atuo em consultório privado, no ambiente hospitalar e em atendimentos digitais, sempre com o propósito de promover um envelhecimento saudável e preservar a funcionalidade e a autonomia dos meus pacientes.</p>
+          <div class="mt-5">
             <h4 class="font-bold text-white">Dr. Felipe Bozi</h4>
-            <p class="text-xs text-brand-purple">Médico Clínico Geral e Geriatra</p>
+            <p class="text-xs text-brand-light-blue mb-5">Médico Clínico Geral e Geriatra</p>
+            <p class="text-gray-400 italic mb-4">Médico geriatra, pesquisador e entusiasta de inovação em saúde. Atua em consultório privado, no ambiente hospitalar e em atendimentos digitais, sempre com o propósito de promover um envelhecimento saudável e preservar a funcionalidade e a autonomia de seus pacientes.</p>
           </div>
         </div>
 
-        <!-- Testimonial 3 -->
-        <div class="bg-brand-dark p-8 rounded-xl relative mt-10 md:mt-0" data-aos="flip-left" data-aos-delay="200">
-          <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
-            <img src="assets/img/squad/edilaine.png" class="w-20 h-20 rounded-full border-4 border-brand-purple">
+        <!-- Member 3 -->
+        <div class="bg-brand-dark p-8 rounded-xl border-4 border-brand-light-blue relative mt-10 md:mt-0" data-aos="flip-left" data-aos-delay="200">
+          <div class="flex justify-center">
+            <img src="assets/img/squad/edilaine.png" class="w-40 h-40 rounded-full" alt="Edilaine">
           </div>
-          <div class="mt-8">
-            <p class="text-gray-400 italic mb-4">Com foco no bem-estar emocional dos colaboradores, Edilaine é uma profissional que alia sensibilidade e técnica. Atuando em soluções para a saúde mental, qualidade de vida no trabalho e práticas organizacionais alinhadas à NR1.</p>
+          <div class="mt-5">
             <h4 class="font-bold text-white">Edilaine Laporta</h4>
-            <p class="text-xs text-brand-purple">Psicóloga Especialista em Saúde Mental e Emocional</p>
+            <p class="text-xs text-brand-light-blue mb-5">Psicóloga Especialista em Saúde Mental e Emocional</p>
+            <p class="text-gray-400 italic mb-4">Com foco no bem-estar emocional dos colaboradores, Edilaine é uma profissional que alia sensibilidade e técnica. Atuando em soluções para a saúde mental, qualidade de vida no trabalho e práticas organizacionais alinhadas à NR1.</p>
+          </div>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="bg-brand-dark p-8 rounded-xl border-4 border-brand-light-blue relative mt-10 md:mt-0" data-aos="flip-left" data-aos-delay="200">
+          <div class="flex justify-center">
+            <img src="assets/img/squad/taise.jpeg" class="w-40 h-40 rounded-full" alt="Taise">
+          </div>
+          <div class="mt-5">
+            <h4 class="font-bold text-white">Taíse Martinoff</h4>
+            <p class="text-xs text-brand-light-blue mb-5">Nutricionista</p>
+            <p class="text-gray-400 italic mb-4">Nutricionista especializada em saúde da mulher e mestre em Ciências do Envelhecimento, atua com foco em emagrecimento, metabolismo e qualidade de vida. Seu propósito é traduzir evidências científicas em ações simples, aplicáveis e de impacto real na saúde.</p>
+          </div>
+        </div>
+
+        <!-- Member 5 -->
+        <div class="bg-brand-dark p-8 rounded-xl border-4 border-brand-light-blue relative mt-10 md:mt-0" data-aos="flip-left" data-aos-delay="200">
+          <div class="flex justify-center">
+            <img src="assets/img/squad/katia.jpeg" class="w-40 h-40 rounded-full" alt="Katia Iazzette">
+          </div>
+          <div class="mt-5">
+            <h4 class="font-bold text-white">Katia Iazzette</h4>
+            <p class="text-xs text-brand-light-blue mb-5">Enfermeira </p>
+            <p class="text-gray-400 italic mb-4">Profissional com mais de 20 anos de experiência na área da saúde, atuando em cuidados especializados, manejo avançado de feridas, terapias complementares e práticas de estética avançada, integrando conhecimento técnico e atenção integral ao paciente.</p>
           </div>
         </div>
       </div>
 
       <div class="text-center mt-12">
-        <button class="bg-brand-purple text-white px-8 py-3 rounded-full font-bold hover:bg-fuchsia-700 transition shadow-lg hover:shadow-purple-500/50">
+        <a href="mailto:janvieirapalestras@gmail.com" class="bg-brand-purple text-white px-8 py-3 rounded-full font-bold hover:bg-fuchsia-700 transition shadow-lg hover:shadow-purple-500/50">
           SOLICITAR PROPOSTA
-        </button>
+        </a>
       </div>
     </div>
   </section>
@@ -656,7 +749,6 @@
             <img src="assets/img/carousel/a.jpeg" alt="Evento 1">
             <img src="assets/img/carousel/b.jpeg" alt="Evento 2">
             <img src="assets/img/carousel/c.jpeg" alt="Evento 3">
-            <img src="assets/img/carousel/d.jpeg" alt="Evento 4">
           </div>
         </div>
 
@@ -674,40 +766,35 @@
         <div class="w-full md:w-1/3" data-aos="fade-right">
           <div class="relative">
             <div class="absolute inset-0 bg-brand-purple blur-2xl opacity-20"></div>
-            <img src="assets/img/bio-jan.jpeg" class="relative rounded-lg w-full object-cover aspect-[3/4] border-2 border-brand-purple/30">
+            <img src="assets/img/bio-jan.jpeg" class="relative rounded-lg w-full object-cover aspect-[3/4] border-2 border-brand-purple/30" alt="Janete Vieira">
           </div>
         </div>
         <div class="w-full md:w-2/3" data-aos="fade-left">
           <h2 class="text-3xl font-bold mb-4">Sobre Jan Vieira</h2>
           <p class="text-gray-300 mb-4">
-            Uma profissional versátil e apaixonada por transformar vidas por meio de sua voz em prol da saúde, educação e comunicação.
+            Jan Vieira é <strong class="text-brand-purple">mais do que uma profissional</strong>, <strong class="text-brand-purple">é uma ponte que une pessoas</strong>, <strong class="text-brand-purple">empresas e resultados por meio da saúde e da comunicação</strong>. Seu carisma e paixão pelo que faz deixam marcas positivas por onde passa, inspirando mudanças e transformando vidas.
           </p>
           <p class="text-gray-300 mb-4">
-            Jan Vieira trilhou um caminho singular que une suas formações em Enfermagem e Letras na expertise de comunicar de forma clara e objetiva conteúdos de saúde, de forma envolvente e estratégica, transformando e marcando a vida de muitos positivamente.
+            Com formações em Enfermagem e Letras, Jan construiu uma trajetória única que combina conhecimento técnico e sensibilidade humana. Essa combinação permite que ela traduza conteúdos complexos em mensagens claras, estratégicas e envolventes, impactando diretamente a vida de colaboradores, gestores e empresas.
           </p>
 
           <p class="text-gray-300 mb-4">
-            Ao atuar por muitos anos na Gestão de Saúde em empresas renomadas
-            como Central Nacional Unimed, Sulamerica, Dasa, notou o défict de muitos profissionais que não conseguiam "fazer a ponte" entre Gestão de saúde (lado corporativo) x promoção e Prevenção da saúde (pacientes). Foi então que decidiu se dedicar a esta frente, unindo esta ponte e levando agilidade e resultados a empresas e clientes finais (usuários dos serviços oferecidos).
+            Durante sua experiência em grandes organizações como Central Nacional Unimed, SulAmérica e Dasa, Jan percebeu a necessidade urgente de <strong class="text-brand-purple">conectar a gestão de saúde corporativa à promoção e prevenção efetiva da saúde</strong>. Foi a partir dessa visão que ela assumiu a missão de criar soluções que vão além de processos: que geram bem-estar genuíno e resultados sustentáveis.
           </p>
           <p class="text-gray-300 mb-4">
-            Com mais de 15 anos de experiência em <span class="text-brand-purple font-bold">docência</span>, <span class="text-brand-purple font-bold">mentorias</span> e <span class="text-brand-purple font-bold">treinamentos</span>, Jan é uma referência em capacitar profissionais e públicos diversos a superarem o medo de falar em público, se expressarem com confiança e transformarem apresentações em momentos marcantes.
-            Especialista em <span class="text-brand-purple font-bold">Gestão de Saúde Corporativa</span> e em <span class="text-brand-purple font-bold">ações de promoção e prevenção à saúde</span>, Jan ajuda empresas a criar estratégias que melhoram a saúde dos colaboradores e otimizam indicadores de produtividade, promovendo resultados reais e sustentáveis.
+            Reconhecida por sua leveza, energia cativante e competência, Jan possui mais de 15 anos de experiência em mentorias, treinamentos e docência. Ela é especialista em ensinar profissionais e líderes a se comunicarem com confiança e impacto, transformando apresentações em momentos memoráveis.
           </p>
           <p class="text-gray-300 mb-4">
-            Reconhecida por sua inovação, Jan também lidera projetos digitais como <span class="text-brand-purple font-bold">Product Owner</span>, inspirando mudanças por meio de plataformas voltadas à saúde.
+            Além disso, Jan lidera projetos digitais inovadores voltados para saúde, sempre com o propósito de gerar agilidade e eficácia para empresas e serviços.
           </p>
           <p class="text-gray-300 mb-4">
-            Mais do que uma profissional, Jan Vieira é uma inspiração. Seu propósito é claro: transformar pessoas e organizações por meio da <span class="text-brand-purple font-bold">comunicação</span>, <span class="text-brand-purple font-bold">educação</span> e <span class="text-brand-purple font-bold">saúde</span>.
-          </p>
-          <p class="text-gray-300 mb-6">
-            <span class="text-brand-purple font-bold">Minha Missão:</span> Potencializar a comunicação dentro da empresa.
+            Seu propósito é simples, mas poderoso: <strong class="text-brand-purple">fazer da comunicação uma ferramenta transformadora que conecta saúde</strong>, <strong class="text-brand-purple">pessoas</strong> e <strong class="text-brand-purple">resultados</strong>. Quem conhece Jan, sabe: ela é a inspiração que sua organização precisa para atingir o próximo nível.
           </p>
 
           <div class="flex gap-4">
-            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-purple transition"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-purple transition"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-purple transition"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/janvieira/" target="_blank" title="Linkedin Jan Vieira" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-purple transition"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/janvieira_oficial" target="_blank" title="Instagram Jan Vieira" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-purple transition"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:janvieirapalestras@gmail.com" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-purple transition"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
       </div>
@@ -723,10 +810,16 @@
       </div>
 
       <div class="flex flex-col md:flex-row gap-6 text-sm text-gray-400 text-center">
-        <a href="#" class="hover:text-white"><strong>Developed by</strong>: INM</a>
+        <a href="mailto:mcerqscode@gmail.com?subject=Novo projeto&cc=mcerqs@gmail.com.br&body=Achei admirável seu trabalho, gostaria de marcar um café para falar sobre um projeto incrível que gostaria de contar com sua expertise." title="Enviar e-mail"><strong>Developed by</strong>: INM</a></a>
       </div>
     </div>
   </footer>
+
+  <div class="call-to-action">
+    <a href="https://api.whatsapp.com/send?phone=+5511982564918&text=Olá, Jan, acabei de acessar seu site e gostaria de falar contigo sobre uma proposta de trabalho." class="p-8 w-10 h-10 rounded-full bg-green-800 flex items-center justify-center hover:bg-brand-purple transition" target="_blank" title="Abrir Whatsapp">
+      <img src="assets/img/whatsapp.svg" alt="Whatsapp">
+    </a>
+  </div>
 
   <!-- JAVASCRIPT / LOGIC -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

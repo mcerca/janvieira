@@ -105,15 +105,21 @@
       border-radius: 5px;
     }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     .call-to-action {
-      position: fixed;
-      top: 85%;
-      right: 15px;
-      bottom: 0;
+      position: sticky;
+      bottom: 25%;
+      float: right;
     }
 
     .call-to-action a {
       position: relative;
+      right: 10px;
     }
 
     .call-to-action img {
@@ -285,9 +291,9 @@
 </head>
 
 <body class="bg-brand-dark text-white overflow-x-hidden">
-
+  <!-- <div class="w-full"></div> -->
   <!-- HEADER / NAVIGATION -->
-  <header class="fixed w-full top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300" id="navbar">
+  <header class="md:fixed w-full top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300" id="navbar">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a href="/" title="Jan Vieira" class="text-2xl font-bold tracking-tighter">
         <img src="assets/img/logo.png" class="" alt="Logo">
@@ -317,7 +323,7 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden">
+  <section id="home" class="pt-10 md:pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden">
     <!-- Background Glow -->
     <div class="absolute top-0 right-0 w-1/3 h-full bg-brand-purple/10 blur-[100px] rounded-full -z-10"></div>
 
@@ -814,6 +820,7 @@
     </div>
   </footer>
 
+  <!-- CALL TO ACTION -->
   <div class="call-to-action">
     <a href="https://api.whatsapp.com/send?phone=+5511982564918&text=Olá, Jan, acabei de acessar seu site e gostaria de falar contigo sobre uma proposta de trabalho." class="p-8 w-10 h-10 rounded-full bg-green-800 flex items-center justify-center hover:bg-brand-purple transition" target="_blank" title="Abrir Whatsapp">
       <img src="assets/img/whatsapp.svg" alt="Whatsapp">
@@ -833,7 +840,14 @@
     // Mobile Menu Toggle
     function toggleMenu() {
       const menu = document.getElementById('mobile-menu');
+      const sectionHome = document.getElementById('home');
       menu.classList.toggle('hidden');
+
+      if (!menu.classList.contains('hidden')) {
+        sectionHome.setAttribute("style", "padding-top: 10rem")
+      } else {
+        sectionHome.removeAttribute("style")
+      }
     }
 
     // Navbar fica transparente no topo e sólida ao rolar

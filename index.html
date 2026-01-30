@@ -186,6 +186,10 @@
       -webkit-text-fill-color: transparent;
     }
 
+    #mobile-menu {
+      position: relative;
+    }
+
     /* Animação de Flutuação (Floating) para Imagens */
     @keyframes float {
       0% {
@@ -901,7 +905,7 @@
       menu.classList.toggle('hidden');
 
       if (!menu.classList.contains('hidden')) {
-        sectionHome.setAttribute("style", "padding-top: 10rem")
+        sectionHome.setAttribute("style", "padding-top: 5rem")
       } else {
         sectionHome.removeAttribute("style")
       }
